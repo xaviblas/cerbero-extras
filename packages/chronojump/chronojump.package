@@ -8,7 +8,7 @@ class App(package.App):
     app_name = 'Chronojump'
     shortdesc = 'Chronojump'
     url = "http://www.chronojump.org/"
-    version = '1.4.2'
+    version = '1.5.0'
     license = License.GPL
     vendor = 'LongoMatch Project'
     uuid = '5f446666-4165-511f-8287-e8f2a895f853'
