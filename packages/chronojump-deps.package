@@ -39,6 +39,10 @@ class Package(package.Package):
              'lib/mono/4.5/System.Xml.dll',
              'lib/mono/4.5/mscorlib.dll',
         ]
+
+        if self.config.target_platform == Platform.DARWIN:
+            r += ['bin/chronojump_importer.py']
+
         if self.config.target_platform == Platform.LINUX:
             prefix = self.config.prefix
             if not prefix.endswith('/'):
