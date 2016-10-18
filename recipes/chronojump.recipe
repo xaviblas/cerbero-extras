@@ -1,5 +1,6 @@
 # -*- Mode: Python -*- vi:si:et:sw=4:sts=4:ts=4:syntax=python
 import shutil
+import os
 
 from cerbero.utils import shell
 from cerbero.build.build import modify_environment
@@ -11,7 +12,7 @@ class Recipe(recipe.Recipe):
     remotes = {'origin': 'git://git.gnome.org/chronojump'}
     autoreconf = True
     autoreconf_sh = 'sh autogen.sh'
-    commit = 'origin/master'
+    commit = os.environ['CHRONOJUMP_COMMIT']
     deps = ['gstreamer', 'gst-plugins-base']
     platform_deps = {
         Platform.DARWIN: ['mono', 'gtk-sharp'],

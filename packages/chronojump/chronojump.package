@@ -1,6 +1,7 @@
 # vi:si:et:sw=4:sts=4:ts=4:syntax=python
 # -*- Mode: Python -*-
 
+import os
 
 class App(package.App):
 
@@ -8,7 +9,7 @@ class App(package.App):
     app_name = 'Chronojump'
     shortdesc = 'Chronojump'
     url = "http://www.chronojump.org/"
-    version = '1.4.2'
+    version = os.environ['CHRONOJUMP_VERSION']
     license = License.GPL
     vendor = 'LongoMatch Project'
     uuid = '5f446666-4165-511f-8287-e8f2a895f853'
