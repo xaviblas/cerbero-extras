@@ -1,6 +1,5 @@
 # vi:si:et:sw=4:sts=4:ts=4:syntax=python
 # -*- Mode: Python -*-
-
 import os
 
 class App(package.App):
@@ -9,6 +8,9 @@ class App(package.App):
     app_name = 'Chronojump'
     shortdesc = 'Chronojump'
     url = "http://www.chronojump.org/"
+    if not 'CHRONOJUMP_VERSION' in os.environ:
+        raise RuntimeError("CHRONOJUMP_VERSION environment variable needs to be set\nThis is the version shown to the user, name of the bundle, etc.")
+
     version = os.environ['CHRONOJUMP_VERSION']
     license = License.GPL
     vendor = 'LongoMatch Project'
