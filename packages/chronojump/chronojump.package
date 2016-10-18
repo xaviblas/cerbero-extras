@@ -9,7 +9,7 @@ class App(package.App):
     shortdesc = 'Chronojump'
     url = "http://www.chronojump.org/"
     if not 'CHRONOJUMP_VERSION' in os.environ:
-        raise RuntimeError("CHRONOJUMP_VERSION environment variable needs to be set\nThis is the version shown to the user, name of the bundle, etc.")
+        raise RuntimeError("CHRONOJUMP_VERSION environment variable needs to be set\nThis is the version shown to the user, name of the bundle, etc.\nCheck packages/chronojump/chronojump.package in cerbero-extras")
 
     version = os.environ['CHRONOJUMP_VERSION']
     license = License.GPL
