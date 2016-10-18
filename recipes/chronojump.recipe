@@ -35,7 +35,7 @@ class Recipe(recipe.Recipe):
         Platform.LINUX: ['chronojump']
     }
     platform_files_bins = {
-        Platform.DARWIN: ['bin/chronojump_importer.py']
+        Platform.DARWIN: ['chronojump_importer.py']
     }
     files_chronojump = ['lib/chronojump']
 
