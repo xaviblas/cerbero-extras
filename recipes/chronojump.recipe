@@ -9,7 +9,7 @@ class Recipe(recipe.Recipe):
     name = 'chronojump'
     version = '1.0'
     licenses = [License.GPL]
-    remotes = {'origin': 'git://git.gnome.org/chronojump'}
+    remotes = {'origin': 'git@gitlab.gnome.org:GNOME/chronojump.git'}
     autoreconf = True
     autoreconf_sh = 'sh autogen.sh'
     commit = os.environ.get('CHRONOJUMP_COMMIT', 'origin/master')
