@@ -35,7 +35,7 @@ class Recipe(recipe.Recipe):
         Platform.LINUX: ['chronojump']
     }
     platform_files_bins = {
-        Platform.DARWIN: ['chronojump_importer.py', 'ffmpeg', 'ffplay']
+        Platform.DARWIN: ['test-delete.py', 'chronojump_importer.py', 'ffmpeg', 'ffplay']
     }
     files_chronojump = ['lib/chronojump']
 
