@@ -28,16 +28,16 @@ class Recipe(recipe.Recipe):
     files_doc = ['share/doc/chronojump']
     files_icons = ['share/icons/hicolor/48x48/apps/chronojump.png']
     files_pyhon = ['lib/chronojump/python']
-    platform_files_bin = {
-        Platform.WINDOWS: ['%(sdir)s/Chronojump.exe'],
-    }
+        
+    #platform_files_bins expect the path, works different than platform_files_bin (tries to find the path depending on filename on each platform)
+    #note there has to be only on platform_files_bins and one platform_files_bin
+
     platform_files_bins = {
         Platform.LINUX: ['chronojump']
     }
-    platform_files_bins = {
-        #Platform.DARWIN: ['test-delete.py', 'chronojump_importer.py', 'ffmpeg', 'ffplay']
-        #platform_files_bins expect the path, works different than platform_files_bin (tries to find the path depending on filename on each platform)
-        Platform.DARWIN: ['bin/test-delete.py', 'bin/chronojump_importer.py', 'bin/ffmpeg', 'bin/ffplay'] 
+    platform_files_bin = {
+        Platform.WINDOWS: ['%(sdir)s/Chronojump.exe'],
+        Platform.DARWIN: ['%(sdir)s/test-delete.py', '%(sdir)s/chronojump_importer.py', '%(sdir)s/ffmpeg', '%(sdir)s/ffplay']
     }
 
     files_chronojump = ['lib/chronojump']
