@@ -34,4 +34,4 @@ export MONO_CONFIG=$PREFIX/etc/mono/config
 export MONO_CFG_DIR=$PREFIX/etc
 
 cd "$PREFIX/bin"
-./mono-sgen  "$PREFIX/lib/chronojump/ChronoJump.exe"
+./mono-sgen  "$PREFIX/lib/chronojump/Chronojump.exe"
